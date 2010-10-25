@@ -6,12 +6,12 @@ before_filter :only => [:index, :tags] do
 end
 
 def index
-  @fortunes = Fortune.search(params[:search]).order("created_at desc")
+  @fortunes = Fortune.paginate :page => params[:page], :order => 'updated_at DESC'
   respond_with @fortunes
 end
 
 def tags
-  @fortunes = Fortune.tagged_with(params[:name])
+  @fortunes = Fortune.tagged_with(params[:name]).paginate :page => params[:page], :order => 'updated_at DESC'
   render 'index'
 end
 
@@ -36,19 +36,25 @@ end
 
   # POST /fortunes
   # POST /fortunes.xml
-  def create
-    @fortune = Fortune.new(params[:fortune])
-    @fortune.save
-    respond_with(@fortune)
+def create
+  @fortune = Fortune.new(params[:fortune])
+  if @fortune.save
+    redirect_to fortunes_path, :notice => 'Fortune was successfully created.'
+  else
+    render 'new'
   end
+end
 
   # PUT /fortunes/1
   # PUT /fortunes/1.xml
   def update
-    @fortune = Fortune.find(params[:id])
-    @fortune.update_attributes(params[:fortune])
-    respond_with(@fortune)
+  @fortune = Fortune.find_by_id(params[:id])
+  if @fortune.update_attributes(params[:fortune])
+    redirect_to fortunes_path, :notice => 'Fortune was successfully updated.'
+  else
+    render 'edit'
   end
+end
 
   # DELETE /fortunes/1
   # DELETE /fortunes/1.xml

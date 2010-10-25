@@ -19,3 +19,5 @@ end
 gem 'nifty-generators'
 gem 'responders'
 gem 'acts-as-taggable-on'
+gem 'will_paginate', '~> 3.0.beta'
+gem 'ajaxful_rating'
