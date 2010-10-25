@@ -12,6 +12,8 @@ gem 'unicorn'
 group :development do
   gem 'wirble'
   gem 'hirb'
+   # automate using jQuery: http://github.com/indirect/jquery-rails
+  gem 'jquery-rails'
 end
 
 gem 'nifty-generators'

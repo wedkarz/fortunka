@@ -1,4 +1,6 @@
 class FortunesController < ApplicationController
+  respond_to :html, :atom, :js
+  
   # GET /fortunes
   # GET /fortunes.xml
   def index
@@ -9,9 +11,9 @@ class FortunesController < ApplicationController
   # GET /fortunes/1
   # GET /fortunes/1.xml
   def show
-    @fortune = Fortune.find(params[:id])
-    respond_with(@fortune)
-  end
+  @fortune = Fortune.find(params[:id])
+  respond_with @fortune
+end
 
   # GET /fortunes/new
   # GET /fortunes/new.xml
