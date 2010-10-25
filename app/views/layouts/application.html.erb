@@ -3,9 +3,8 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag 
-  "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", 
-  "jquery.rails.js" %> 
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+    <%= javascript_include_tag "jquery.rails.js" %> 
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
     <%= auto_discovery_link_tag(:atom, fortunes_path(:atom)) %>
