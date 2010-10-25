@@ -3,10 +3,11 @@ class FortunesController < ApplicationController
   
   # GET /fortunes
   # GET /fortunes.xml
-  def index
-    @fortunes = Fortune.all
-    respond_with(@fortunes)
-  end
+def index
+  @fortunes = Fortune.search(params[:search]).order("created_at desc")
+  @tags = Fortune.tag_counts
+  respond_with @fortunes  # bez zmian
+end
 
   # GET /fortunes/1
   # GET /fortunes/1.xml

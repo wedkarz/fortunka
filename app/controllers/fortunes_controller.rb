@@ -1,11 +1,18 @@
 class FortunesController < ApplicationController
   respond_to :html, :atom, :js
   
-  # GET /fortunes
-  # GET /fortunes.xml
+before_filter :only => [:index, :tags] do
+  @tags = Fortune.tag_counts  # for tag clouds    
+end
+
 def index
   @fortunes = Fortune.search(params[:search]).order("created_at desc")
   respond_with @fortunes
+end
+
+def tags
+  @fortunes = Fortune.tagged_with(params[:name])
+  render 'index'
 end
 
   # GET /fortunes/1

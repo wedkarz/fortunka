@@ -1,17 +1,4 @@
-<%= form_for(@fortune) do |f| %>
-  <% if @fortune.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@fortune.errors.count, "error") %> prohibited this fortune from being saved:</h2>
-
-      <ul>
-      <% @fortune.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for @fortune do |f| %>
+<p>Body:<br/><%= f.text_area :body, :cols => 60, :rows => 8 %></p>
+<p><%= f.label :tag_list %>: <%= f.text_field :tag_list, :size => 60 %></p>
 <% end %>

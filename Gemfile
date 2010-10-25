@@ -18,3 +18,4 @@ end
 
 gem 'nifty-generators'
 gem 'responders'
+gem 'acts-as-taggable-on'
