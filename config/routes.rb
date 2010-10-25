@@ -1,5 +1,6 @@
 Fortunka2::Application.routes.draw do
-  resources :fortunes do
+resources :fortunes do
+  resources :comments
   collection do 
     get :tags
   end

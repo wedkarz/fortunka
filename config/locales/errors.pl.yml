@@ -1,0 +1,6 @@
+errors:
+  template:
+    header_message: 
+      "Nieprawidłowo wypełniony formularz"
+    message: 
+      "Popraw poniższe błędy i spróbuj jeszcze raz:"
