@@ -13,3 +13,5 @@ group :development do
   gem 'wirble'
   gem 'hirb'
 end
+
+gem 'nifty-generators'

@@ -1,4 +1,4 @@
-class FortunesController < ApplicationController
+class FortunesController < ApplicationController::Base
   respond_to :html
   
   def index

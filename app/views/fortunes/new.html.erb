@@ -1,0 +1,7 @@
+<h1>Nowa fortunka</h1>
+<%= form_for(Fortune.new) do |form| %>
+<p>
+  <%= form.text_area :body %><br/>
+  <%= form.submit %>
+<p>
+<% end %>
