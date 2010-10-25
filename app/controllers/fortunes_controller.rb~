@@ -1,6 +1,6 @@
 class FortunesController < ApplicationController
-
-respond_to :html, :atom, :js
+  respond_to :html, :atom, :js
+  
   # GET /fortunes
   # GET /fortunes.xml
   def index

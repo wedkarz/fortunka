@@ -1,9 +1,11 @@
-<% @fortunes.each do |fortune| %>
-<p>
- <%= fortune.body %>
-<%= link_to "Show", fortune_path(fortune) %>
- <%= link_to "Edit", edit_fortune_path(fortune) %>
- <%= link_to "Delete", fortune_path(fortune), :confirm = "Are you sure?", :method => :delete %>
-</p>
-<% end %>
-<%= link_to "New Fortune", new_fortune_path %>
+<% title "Wszystkie fortunki" %>
+<%= form_tag fortunes_path, :method => :get, :remote => true do %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>  
+  </p>  
+<% end %>  
+<div id="fortunes">
+  <%= render @fortunes %>
+</div>
+<p><%= link_to "New Fortune", new_fortune_path %></p>
