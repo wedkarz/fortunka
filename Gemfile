@@ -15,3 +15,4 @@ group :development do
 end
 
 gem 'nifty-generators'
+gem 'responders'
