@@ -2,13 +2,15 @@
 <p>
   <%= @fortune.body %>
 </p>
-<p>Tags: <%= fortune.tag_list %></p>
+<p>Tags: <%= @fortune.tag_list %></p>
 <p><%= link_to "All Fortunes", fortunes_path %></p>
-
-<h2>Dodaj komentarz</h2>
-<%= render 'comments/form' %>
 
 <% if @fortune.comments.any? %>
   <h2>Komentarze</h2>
   <%= render @fortune.comments %>
 <% end %>
+
+<h2>Dodaj komentarz</h2>
+<%= render 'comments/form' %>
+
+

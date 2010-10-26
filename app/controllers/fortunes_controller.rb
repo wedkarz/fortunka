@@ -6,14 +6,15 @@ before_filter :only => [:index, :tags] do
 end
 
 def index
-  @fortunes = Fortune.paginate :page => params[:page], :order => 'updated_at DESC'
+  @fortunes = Fortune.search(params[:search], params[:page])
   respond_with @fortunes
 end
 
-def tags
-  @fortunes = Fortune.tagged_with(params[:name]).paginate :page => params[:page], :order => 'updated_at DESC'
-  render 'index'
-end
+	def tags
+  	@fortunes = Fortune.tagged_with(params[:name])
+  	@fortunes = @fortunes.paginate :per_page => 5, :page => params[:page], :order => 'created_at desc'
+  	render 'index'
+	end
 
   # GET /fortunes/1
   # GET /fortunes/1.xml
@@ -36,25 +37,19 @@ end
 
   # POST /fortunes
   # POST /fortunes.xml
-def create
-  @fortune = Fortune.new(params[:fortune])
-  if @fortune.save
-    redirect_to fortunes_path, :notice => 'Fortune was successfully created.'
-  else
-    render 'new'
+  def create
+    @fortune = Fortune.new(params[:fortune])
+    @fortune.save
+    respond_with(@fortune)
   end
-end
 
   # PUT /fortunes/1
   # PUT /fortunes/1.xml
   def update
-  @fortune = Fortune.find_by_id(params[:id])
-  if @fortune.update_attributes(params[:fortune])
-    redirect_to fortunes_path, :notice => 'Fortune was successfully updated.'
-  else
-    render 'edit'
+    @fortune = Fortune.find(params[:id])
+    @fortune.update_attributes(params[:fortune])
+    respond_with(@fortune)
   end
-end
 
   # DELETE /fortunes/1
   # DELETE /fortunes/1.xml

@@ -6,13 +6,12 @@ before_filter :only => [:index, :tags] do
 end
 
 def index
-  @fortunes = Fortune.paginate :page => params[:page], :order => 'updated_at DESC'
+  @fortunes = Fortune.search(params[:search], params[:page])
   respond_with @fortunes
 end
 
 def tags
-  @fortunes = Fortune.tagged_with(params[:name])
-  @fortunes = @fortunes.paginate :page => params[:page], :order => 'updated_at DESC'
+  @fortunes = Fortune.tagged_with(params[:name]).paginate :page => params[:page], :order => 'updated_at DESC'
   render 'index'
 end
 

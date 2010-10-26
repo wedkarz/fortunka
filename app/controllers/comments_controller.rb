@@ -10,12 +10,12 @@ class CommentsController < ApplicationController
   def create
     @comment = @fortune.comments.new params[:comment]
     @comment.save
-    respond_with @comment, :location => fortunes_url
+    respond_with @comment, :location => fortune_path(@fortune)
   end
 
   def destroy
     @comment = @fortune.comments.find params[:id]
     @comment.destroy
-    respond_with @fortune
+    respond_with @comment, :location => fortune_path(@fortune)
   end
 end

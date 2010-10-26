@@ -4,10 +4,11 @@ class Fortune < ActiveRecord::Base
   acts_as_taggable_on :tags
   ActsAsTaggableOn::TagList.delimiter = " "
   
-  # ilosc fortunek na stronie
-  self.per_page = 5
   
-  def self.search(query)
-    where("body like ?", "%#{query}%")
+  def self.search(query, page)
+    paginate :per_page => 5, :page => page,
+           :conditions => ['body like ?', "%#{query}%"],
+           :order => 'created_at desc'
   end
+  
 end

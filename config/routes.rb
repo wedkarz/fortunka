@@ -1,4 +1,6 @@
 Fortunka2::Application.routes.draw do
+devise_for :users
+
 resources :fortunes do
   resources :comments
   collection do 
