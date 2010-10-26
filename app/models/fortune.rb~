@@ -5,10 +5,6 @@ class Fortune < ActiveRecord::Base
   ActsAsTaggableOn::TagList.delimiter = " "
   
   
-  #def self.search(query)
-  #  where("body like ?", "%#{query}%")
-  #end
-  
   def self.search(query, page)
     paginate :per_page => 5, :page => page,
            :conditions => ['body like ?', "%#{query}%"],

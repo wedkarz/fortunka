@@ -4,6 +4,7 @@ class Fortune < ActiveRecord::Base
   acts_as_taggable_on :tags
   ActsAsTaggableOn::TagList.delimiter = " "
   
+  validates_presence_of :body, :tag_list
   
   def self.search(query, page)
     paginate :per_page => 5, :page => page,
