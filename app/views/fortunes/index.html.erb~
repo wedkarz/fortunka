@@ -14,9 +14,14 @@
 </div>
 
 <% if user_signed_in? %>  
-<p><%= link_to "Kopsnij nową fortunkę", new_fortune_path %></p>
+
+
+<p>                	<%= link_to "Kopsnij nową fortunkę", new_fortune_path %></p>
+
+
 <% end %>
 
+<p>&nbsp;</p>
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
   <%= link_to tag.name, tags_fortunes_path(:name=>tag.name), :class => css_class %>

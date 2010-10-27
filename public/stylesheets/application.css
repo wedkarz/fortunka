@@ -91,11 +91,11 @@ a {
     color: #FF0084; }
   .flickr_pagination a {
     border: 1px solid #DDDDDD;
-    color: #0063DC;
+    color: #F71570;
     text-decoration: none; }
     .flickr_pagination a:hover, .flickr_pagination a:focus {
-      border-color: #003366;
-      background: #0063DC;
+      border-color: #F71570;
+      background: #F71570;
       color: white; }
   .flickr_pagination .page_info {
     color: #aaa;

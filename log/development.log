@@ -17018,3 +17018,1990 @@ Rendered fortunes/_fortune.html.erb (19.1ms)
   [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
 Rendered fortunes/index.html.erb within layouts/application (31.8ms)
 Completed 200 OK in 69ms (Views: 35.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 02:54:24 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (2.7ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 107ms (Views: 26.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes?page=2" for 127.0.0.1 at 2010-10-27 02:54:27 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 5[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (18.4ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 67ms (Views: 35.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 02:54:28 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (18.7ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 70ms (Views: 34.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 02:54:29 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (19.4ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 100ms (Views: 35.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 02:54:41 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (4.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (2.9ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 111ms (Views: 26.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/fortunes?page=4" for 127.0.0.1 at 2010-10-27 02:54:43 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.8ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 15[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (20.6ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 73ms (Views: 38.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 02:54:44 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (18.5ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 69ms (Views: 34.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:03:15 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (19.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 101ms (Views: 36.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=Jan" for 127.0.0.1 at 2010-10-27 03:03:33 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Jan"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%Jan%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+Rendered collection (0.0ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 58ms (Views: 26.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:04:58 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.5ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 70ms (Views: 35.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:05:01 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (19.3ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 109ms (Views: 37.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:05:24 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (50.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 101ms (Views: 68.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:05:25 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.3ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 69ms (Views: 34.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:05:26 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 70ms (Views: 36.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:08:35 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (19.1ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 102ms (Views: 36.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:08:36 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.6ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 68ms (Views: 35.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:08:37 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.4ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 69ms (Views: 35.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:09:07 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (19.6ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 103ms (Views: 36.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:09:33 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (51.7ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 101ms (Views: 68.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:10:04 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.0ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 69ms (Views: 35.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:10:19 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (18.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 72ms (Views: 37.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes?page=1" for 127.0.0.1 at 2010-10-27 03:10:34 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (19.5ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 103ms (Views: 37.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/sign_in?authenticity_token=eUK%2fbsjvIx0zAKwES%2bNHjFxj0ClhLfX1x6tXXWemmqM%3d" for 127.0.0.1 at 2010-10-27 03:10:47 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "token"=>"f284f100c5e54de0481f6ea8d7cd034bea317f55"}
+  [1m[36mUser Load (33.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."rpx_identifier" = 'https://www.google.com/profiles/107296424191552304072') LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2010-10-27 01:10:48.760544', "last_sign_in_at" = '2010-10-27 00:30:35.467913', "sign_in_count" = 3, "updated_at" = '2010-10-27 01:10:48.761217' WHERE ("users"."id" = 2)
+Redirected to http://localhost:2307/
+Completed 302 Found in 1250ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:10:49 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (5.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (90.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 147ms (Views: 107.2ms | ActiveRecord: 43.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:11:00 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (193.6ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (357.9ms)
+Completed 200 OK in 397ms (Views: 361.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:13:31 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (15.0ms)
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (177.8ms)
+Completed 200 OK in 217ms (Views: 180.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:13:49 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (19.8ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (194.3ms)
+Completed 200 OK in 234ms (Views: 198.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:13:50 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (175.5ms)
+Completed 200 OK in 216ms (Views: 179.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:14:09 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (23.6ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (197.7ms)
+Completed 200 OK in 245ms (Views: 208.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:14:14 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (174.5ms)
+Completed 200 OK in 216ms (Views: 177.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:15:37 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (15.1ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (176.4ms)
+Completed 200 OK in 216ms (Views: 180.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:16:11 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (172.4ms)
+Completed 200 OK in 212ms (Views: 176.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:16:50 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.1ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (171.8ms)
+Completed 200 OK in 211ms (Views: 175.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:18:27 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (173.7ms)
+Completed 200 OK in 213ms (Views: 177.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:18:51 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (1.9ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.5ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (174.6ms)
+Completed 200 OK in 215ms (Views: 177.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:19:23 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (15.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (187.0ms)
+Completed 200 OK in 227ms (Views: 191.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:20:10 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (160.7ms)
+Completed 200 OK in 201ms (Views: 165.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:20:22 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.3ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (175.3ms)
+Completed 200 OK in 215ms (Views: 179.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:20:33 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (2.7ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (15.3ms)
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (185.5ms)
+Completed 200 OK in 226ms (Views: 184.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:20:46 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (15.3ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (182.3ms)
+Completed 200 OK in 223ms (Views: 186.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:21:02 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (174.1ms)
+Completed 200 OK in 214ms (Views: 178.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:21:42 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.7ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (177.9ms)
+Completed 200 OK in 218ms (Views: 181.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:21:54 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (13.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (174.7ms)
+Completed 200 OK in 214ms (Views: 178.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:22:01 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (3.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.5ms)
+  [1m[35mUser Load (32.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (199.2ms)
+Completed 200 OK in 252ms (Views: 172.9ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:22:07 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery
+Rendered comments/_form.html.erb (14.2ms)
+  [1m[36mUser Load (33.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (142.5ms)
+Completed 200 OK in 214ms (Views: 146.1ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:22:09 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (91.3ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (103.3ms)
+Completed 200 OK in 141ms (Views: 106.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:23:29 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (90.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (102.5ms)
+Completed 200 OK in 142ms (Views: 106.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-10-27 03:23:52 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (3.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Redirected to http://localhost:2307/
+Completed 302 Found in 76ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:23:52 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+Rendered fortunes/_fortune.html.erb (54.9ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 111ms (Views: 72.9ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/users/sign_in?authenticity_token=eUK%2fbsjvIx0zAKwES%2bNHjFxj0ClhLfX1x6tXXWemmqM%3d" for 127.0.0.1 at 2010-10-27 03:24:00 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "token"=>"3cbde54630f8a2acebfaffdae625c51ea1458b42"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."rpx_identifier" = 'https://www.google.com/profiles/107296424191552304072') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2010-10-27 01:24:01.051624', "last_sign_in_at" = '2010-10-27 01:10:48.760544', "sign_in_count" = 4, "updated_at" = '2010-10-27 01:24:01.052118' WHERE ("users"."id" = 2)
+Redirected to http://localhost:2307/
+Completed 302 Found in 1104ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:24:01 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (35.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (95.4ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 148ms (Views: 77.5ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/fortunes/27" for 127.0.0.1 at 2010-10-27 03:24:02 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 27) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 27) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 27)) AS subquery[0m
+Rendered comments/_form.html.erb (14.0ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/show.html.erb within layouts/application (145.2ms)
+Completed 200 OK in 218ms (Views: 149.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:24:04 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (61.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 143ms (Views: 108.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:25:50 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (91.9ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (104.8ms)
+Completed 200 OK in 144ms (Views: 108.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:26:32 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (62.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (2.0ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (110.3ms)
+Completed 200 OK in 149ms (Views: 111.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:26:57 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (32.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (90.5ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 142ms (Views: 75.8ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:27:19 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (5.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (62.6ms)
+  [1m[36mActsAsTaggableOn::Tag Load (2.1ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 150ms (Views: 74.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:27:30 +0200
+  Processing by FortunesController#new as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered fortunes/_form.html.erb (27.1ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/new.html.erb within layouts/application (114.5ms)
+Completed 200 OK in 149ms (Views: 118.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:29:24 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (89.6ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (102.8ms)
+Completed 200 OK in 179ms (Views: 106.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:31:05 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (97.7ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (110.3ms)
+Completed 200 OK in 151ms (Views: 113.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:31:21 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (92.5ms)
+  [1m[36mActsAsTaggableOn::Tag Load (1.6ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 180ms (Views: 108.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:36:13 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (101.1ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (113.5ms)
+Completed 200 OK in 153ms (Views: 117.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:36:23 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (92.7ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (106.1ms)
+Completed 200 OK in 179ms (Views: 109.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:36:30 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.8ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (100.4ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (117.1ms)
+Completed 200 OK in 172ms (Views: 120.5ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/users/sign_in?authenticity_token=eUK%2fbsjvIx0zAKwES%2bNHjFxj0ClhLfX1x6tXXWemmqM%3d" for 127.0.0.1 at 2010-10-27 03:37:22 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "token"=>"3cbde54630f8a2acebfaffdae625c51ea1458b42"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 104ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:37:22 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (95.0ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (107.6ms)
+Completed 200 OK in 184ms (Views: 111.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:37:24 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (97.1ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (110.3ms)
+Completed 200 OK in 149ms (Views: 113.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:37:38 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (96.4ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 183ms (Views: 113.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:42:02 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (98.8ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 151ms (Views: 115.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:43:58 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (93.6ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (106.5ms)
+Completed 200 OK in 179ms (Views: 108.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:44:11 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (4.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (96.4ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 148ms (Views: 109.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:44:18 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (93.1ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.7ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (106.2ms)
+Completed 200 OK in 184ms (Views: 110.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-10-27 03:44:21 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 77ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:44:21 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (20.9ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 72ms (Views: 37.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:44:23 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (20.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 107ms (Views: 37.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/sign_in?authenticity_token=eUK%2fbsjvIx0zAKwES%2bNHjFxj0ClhLfX1x6tXXWemmqM%3d" for 127.0.0.1 at 2010-10-27 03:44:37 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "token"=>"858157ae62c077d913db5db4d4f57d332212e490"}
+  [1m[35mUser Load (4.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."rpx_identifier" = 'https://www.google.com/profiles/107296424191552304072') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2010-10-27 01:44:38.726507', "last_sign_in_at" = '2010-10-27 01:24:01.051624', "sign_in_count" = 5, "updated_at" = '2010-10-27 01:44:38.726990' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 1136ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:44:38 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (96.4ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 149ms (Views: 113.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:44:44 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (27.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (116.7ms)
+Completed 200 OK in 151ms (Views: 120.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:45:22 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Bliskim mów, gdyby pytali, że chwilowo zmieniałam adres, że w niebie leczę duszę z silnego przedawkowania rzeczywistości.\r\n— Katarzyna Nosowska", "tag_list"=>"Katarzyna Nosowska"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Bliskim mów, gdyby pytali, że chwilowo zmieniałam adres, że w niebie leczę duszę z silnego przedawkowania rzeczywistości.
+— Katarzyna Nosowska', '2010-10-27 01:45:22.961920', '2010-10-27 01:45:22.961920')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Katarzyna Nosowska')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'Katarzyna Nosowska') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("name") VALUES ('Katarzyna Nosowska')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 28) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 28 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 14) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 28) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:45:23.021609', 14, 28, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/28
+Completed 302 Found in 317ms
+
+
+Started GET "/fortunes/28" for 127.0.0.1 at 2010-10-27 03:45:23 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 28) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 28) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 28)) AS subquery
+Rendered comments/_form.html.erb (47.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (141.2ms)
+Completed 200 OK in 180ms (Views: 144.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:45:27 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (92.4ms)
+  [1m[35mActsAsTaggableOn::Tag Load (1.2ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 146ms (Views: 110.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:45:37 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (64.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (129.6ms)
+Completed 200 OK in 164ms (Views: 133.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:45:42 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Musisz odnaleźć nadzieję i nieważne, że nazwą ciebie głupcem.\r\n— Katarzyna Nosowska", "tag_list"=>"Katarzyna Nosowska"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Musisz odnaleźć nadzieję i nieważne, że nazwą ciebie głupcem.
+— Katarzyna Nosowska', '2010-10-27 01:45:42.315691', '2010-10-27 01:45:42.315691')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Katarzyna Nosowska')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 29 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 14) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 29) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:45:42.477671', 14, 29, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/29
+Completed 302 Found in 324ms
+
+
+Started GET "/fortunes/29" for 127.0.0.1 at 2010-10-27 03:45:42 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 29) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 29) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 29)) AS subquery
+Rendered comments/_form.html.erb (14.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (143.2ms)
+Completed 200 OK in 217ms (Views: 147.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:45:44 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (59.3ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 187ms (Views: 115.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:46:03 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (26.5ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (117.8ms)
+Completed 200 OK in 152ms (Views: 122.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:07 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Jedynym dowodem na to, że istnieje jakaś pozaziemska inteligencja, jest to, że się z nami nie kontaktują.\r\n— Albert Einstein", "tag_list"=>"Albert Einstein"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Jedynym dowodem na to, że istnieje jakaś pozaziemska inteligencja, jest to, że się z nami nie kontaktują.
+— Albert Einstein', '2010-10-27 01:46:07.515021', '2010-10-27 01:46:07.515021')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Albert Einstein')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'Albert Einstein') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("name") VALUES ('Albert Einstein')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 30) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 30 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 15) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 30) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:46:07.545036', 15, 30, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/30
+Completed 302 Found in 231ms
+
+
+Started GET "/fortunes/30" for 127.0.0.1 at 2010-10-27 03:46:07 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 30) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 30) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 30)) AS subquery
+Rendered comments/_form.html.erb (14.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (146.8ms)
+Completed 200 OK in 227ms (Views: 150.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:16 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (97.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (1.0ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 191ms (Views: 114.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:46:18 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (28.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 156ms (Views: 125.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:23 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Jeżeli zabałaganione biurko jest oznaką zabałaganionego umysłu, oznaką czego jest puste biurko?\r\n— Albert Einstein", "tag_list"=>"Albert Einstein"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Jeżeli zabałaganione biurko jest oznaką zabałaganionego umysłu, oznaką czego jest puste biurko?
+— Albert Einstein', '2010-10-27 01:46:23.719418', '2010-10-27 01:46:23.719418')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Albert Einstein')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 31) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 31 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 15) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 31) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:46:23.745225', 15, 31, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/31
+Completed 302 Found in 275ms
+
+
+Started GET "/fortunes/31" for 127.0.0.1 at 2010-10-27 03:46:23 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 31) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 31) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 31)) AS subquery
+Rendered comments/_form.html.erb (14.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (154.2ms)
+Completed 200 OK in 237ms (Views: 158.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:41 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (94.0ms)
+  [1m[35mActsAsTaggableOn::Tag Load (1.0ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 182ms (Views: 111.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:46:43 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (28.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (128.2ms)
+Completed 200 OK in 162ms (Views: 132.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:47 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Chodziliśmy nie szukając się, ale wiedząc, że chodzimy po to, żeby się znaleźć.\r\n— Julio Cortázar", "tag_list"=>"Julio Cortázar"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Chodziliśmy nie szukając się, ale wiedząc, że chodzimy po to, żeby się znaleźć.
+— Julio Cortázar', '2010-10-27 01:46:47.828882', '2010-10-27 01:46:47.828882')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Julio Cortázar')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'Julio Cortázar') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("name") VALUES ('Julio Cortázar')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 32) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 32 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 16) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 32) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:46:47.858101', 16, 32, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/32
+Completed 302 Found in 207ms
+
+
+Started GET "/fortunes/32" for 127.0.0.1 at 2010-10-27 03:46:47 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 32) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 32) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 32)) AS subquery
+Rendered comments/_form.html.erb (13.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (146.0ms)
+Completed 200 OK in 229ms (Views: 149.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:46:49 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (101.2ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (115.3ms)
+Completed 200 OK in 202ms (Views: 119.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:47:26 +0200
+  Processing by FortunesController#new as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_form.html.erb (26.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/new.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 153ms (Views: 124.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2010-10-27 03:47:30 +0200
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "fortune"=>{"body"=>"Wystarczy pomyśleć, ile się zmienia, jeżeli zejdzie się z chodnika i zrobi trzy kroki po jezdni...\r\n— Julio Cortázar", "tag_list"=>"Julio Cortázar"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fortunes" ("body", "created_at", "updated_at") VALUES ('Wystarczy pomyśleć, ile się zmienia, jeżeli zejdzie się z chodnika i zrobi trzy kroki po jezdni...
+— Julio Cortázar', '2010-10-27 01:47:30.424584', '2010-10-27 01:47:30.424584')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (name LIKE 'Julio Cortázar')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 33) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 33 AND "taggings".taggable_type = 'Fortune') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1mSELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 16) AND ("taggings"."taggable_type" = 'Fortune') AND ("taggings"."taggable_id" = 33) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2010-10-27 01:47:30.450666', 16, 33, 'Fortune', NULL, NULL)
+Redirected to http://localhost:2307/fortunes/33
+Completed 302 Found in 251ms
+
+
+Started GET "/fortunes/33" for 127.0.0.1 at 2010-10-27 03:47:30 +0200
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE ("fortunes"."id" = 33) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 33) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "comments" WHERE ("comments".fortune_id = 33)) AS subquery
+Rendered comments/_form.html.erb (13.8ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/show.html.erb within layouts/application (147.9ms)
+Completed 200 OK in 226ms (Views: 151.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:47:32 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (94.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (108.6ms)
+Completed 200 OK in 186ms (Views: 112.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes?page=4" for 127.0.0.1 at 2010-10-27 03:47:38 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (1.0ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 15
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (98.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (112.4ms)
+Completed 200 OK in 152ms (Views: 115.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/fortunes?page=6" for 127.0.0.1 at 2010-10-27 03:47:40 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"6"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.8ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 25[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (60.6ms)
+  [1m[35mActsAsTaggableOn::Tag Load (38.3ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (112.3ms)
+Completed 200 OK in 193ms (Views: 78.0ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/fortunes?page=7" for 127.0.0.1 at 2010-10-27 03:47:41 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"7"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 30
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (101.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (115.6ms)
+Completed 200 OK in 154ms (Views: 118.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fortunes?page=2" for 127.0.0.1 at 2010-10-27 03:47:43 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 5
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (60.0ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 154ms (Views: 119.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:48:15 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (95.0ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (108.9ms)
+Completed 200 OK in 147ms (Views: 112.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:50:27 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (98.5ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (112.8ms)
+Completed 200 OK in 152ms (Views: 116.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:50:43 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+ERROR: compiling _app_views_fortunes_index_html_erb__183141942_96445810__534009483 RAISED /home/arybak/fortunka/app/views/fortunes/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/arybak/fortunka/app/views/fortunes/index.html.erb:32: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_fortunes_index_html_erb__183141942_96445810__534009483(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "fortunes/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title "Wszystkie fortunki" 
+@output_buffer.append=  form_tag fortunes_path, :method => :get, :remote => false do @output_buffer.safe_concat('  
+');@output_buffer.safe_concat('  <p>  
+    ');@output_buffer.append= ( text_field_tag :search, params[:search] );@output_buffer.safe_concat('  
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( submit_tag "Search", :name => nil );@output_buffer.safe_concat('  
+');@output_buffer.safe_concat('  </p>  
+'); end   
+@output_buffer.safe_concat('<div id="fortunes">
+  ');@output_buffer.append= ( render @fortunes );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+
+<div class="flickr_pagination">
+  ');@output_buffer.append= ( will_paginate @posts, :container => false );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+
+'); if user_signed_in?   
+@output_buffer.safe_concat('
+<span class="btn alignleft">
+                	');@output_buffer.append= ( link_to "Kopsnij nową fortunkę", new_fortune_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</span>
+</footer>
+
+
+<p>&nbsp;</p>
+
+');@output_buffer.append_if_string=  tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to tag.name, tags_fortunes_path(:name=>tag.name), :class => css_class );@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/template.rb:255:in `module_eval'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/template.rb:255:in `compile'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/template.rb:134:in `block in render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications.rb:54:in `instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/template.rb:127:in `render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_view/render/rendering.rb:26:in `render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:92:in `render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/arybak/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/responder.rb:188:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/responder.rb:188:in `default_render'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/responder.rb:126:in `to_html'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/responders-0.6.2/lib/responders/flash_responder.rb:93:in `to_html'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/responder.rb:119:in `respond'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/responder.rb:112:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/mime_responds.rb:232:in `respond_with'
+/home/arybak/fortunka/app/controllers/fortunes_controller.rb:10:in `index'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/base.rb:150:in `process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:440:in `_run__621174249__process_action__404397272__callbacks'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/notifications.rb:52:in `instrument'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/base.rb:119:in `process'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/abstract_controller/rendering.rb:40:in `process'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal.rb:133:in `dispatch'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_controller/metal.rb:173:in `block in action'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:117:in `optimized_each'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:32:in `block in call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:12:in `cache'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/query_cache.rb:31:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/rack/logger.rb:13:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/application.rb:168:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/application.rb:77:in `method_missing'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/chunked.rb:15:in `call'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/connection.rb:76:in `block in pre_process'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/connection.rb:74:in `catch'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/connection.rb:74:in `pre_process'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/connection.rb:57:in `process'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/connection.rb:42:in `receive_data'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/backends/base.rb:57:in `start'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/thin-1.2.7/lib/thin/server.rb:156:in `start'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/handler/thin.rb:14:in `run'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/commands/server.rb:65:in `start'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/commands.rb:30:in `block in <top (required)>'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/commands.rb:27:in `tap'
+/home/arybak/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.1/lib/rails/commands.rb:27:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+Rendered fortunes/index.html.erb within layouts/application (1.6ms)
+Completed   in 42ms
+
+ActionView::Template::Error (/home/arybak/fortunka/app/views/fortunes/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/arybak/fortunka/app/views/fortunes/index.html.erb:32: syntax error, unexpected $end, expecting keyword_end):
+    27:   <%= link_to tag.name, tags_fortunes_path(:name=>tag.name), :class => css_class %>
+    28: <% end %>
+  app/controllers/fortunes_controller.rb:10:in `index'
+
+Rendered /home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered /home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (107.2ms)
+Rendered /home/arybak/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (113.4ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:51:01 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (122.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (1.1ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (138.8ms)
+Completed 200 OK in 213ms (Views: 141.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:51:09 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (119.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (148.3ms)
+Completed 200 OK in 190ms (Views: 152.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:51:23 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (94.1ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.9ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 189ms (Views: 112.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2010-10-27 03:51:47 +0200
+  Processing by FortunesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (102.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (117.0ms)
+Completed 200 OK in 156ms (Views: 120.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2010-10-27 03:51:50 +0200
+  Processing by FortunesController#new as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered fortunes/_form.html.erb (27.1ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/new.html.erb within layouts/application (124.2ms)
+Completed 200 OK in 195ms (Views: 128.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:51:54 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (101.2ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 154ms (Views: 119.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:54:06 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (95.1ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.9ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 190ms (Views: 113.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:54:38 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered fortunes/_fortune.html.erb (100.7ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (114.2ms)
+Completed 200 OK in 153ms (Views: 117.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2010-10-27 03:55:09 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (3.9ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (94.7ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.9ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 191ms (Views: 113.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-10-27 03:55:20 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 85ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:55:21 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (19.2ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 73ms (Views: 38.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:55:24 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (3.8ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (19.3ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 77ms (Views: 39.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:55:39 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.7ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (2.8ms)
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 111ms (Views: 29.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:57:25 +0200
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (3.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (2.8ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 113ms (Views: 27.7ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/users/sign_in?authenticity_token=eUK%2fbsjvIx0zAKwES%2bNHjFxj0ClhLfX1x6tXXWemmqM%3d" for 127.0.0.1 at 2010-10-27 03:57:32 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eUK/bsjvIx0zAKwES+NHjFxj0ClhLfX1x6tXXWemmqM=", "token"=>"3149d71ea5c2e01122b4324bf5907d543a5cc050"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."rpx_identifier" = 'https://www.google.com/profiles/107296424191552304072') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2010-10-27 01:57:33.551981', "last_sign_in_at" = '2010-10-27 01:44:38.726507', "sign_in_count" = 6, "updated_at" = '2010-10-27 01:57:33.552514' WHERE ("users"."id" = 2)[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 1681ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:57:34 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (2.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered fortunes/_fortune.html.erb (88.8ms)
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+Rendered fortunes/index.html.erb within layouts/application (102.2ms)
+Completed 200 OK in 141ms (Views: 105.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-10-27 03:57:40 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:2307/
+Completed 302 Found in 44ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:57:40 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (18.4ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 102ms (Views: 35.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-10-27 03:57:44 +0200
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.6ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE (body like '%%') ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "fortunes" WHERE (body like '%%')) AS subquery
+Rendered fortunes/_fortune.html.erb (53.5ms)
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+Rendered fortunes/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 105ms (Views: 72.1ms | ActiveRecord: 2.1ms)

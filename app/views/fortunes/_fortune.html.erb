@@ -1,5 +1,7 @@
 <p>
+<blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <%= fortune.body %> 
+ </blockquote>
  <%= link_to "Obczaj", fortune_path(fortune) %> 
  <% if user_signed_in? %> |
  <%= link_to "Edytuj", edit_fortune_path(fortune) %> |

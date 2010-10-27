@@ -2,7 +2,7 @@
  <%= fortune.body %> 
  <%= link_to "Obczaj", fortune_path(fortune) %> 
  <% if user_signed_in? %> |
- <%= link_to "Edit", edit_fortune_path(fortune) %> |
- <%= link_to "Delete", fortune_path(fortune), :confirm => "Are you sure?", :method => :delete %>
+ <%= link_to "Edytuj", edit_fortune_path(fortune) %> |
+ <%= link_to "Wywal", fortune_path(fortune), :confirm => "Are you sure?", :method => :delete %>
  <% end %>
 </p>
