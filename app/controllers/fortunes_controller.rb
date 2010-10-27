@@ -1,5 +1,5 @@
 class FortunesController < ApplicationController
-  respond_to :html, :atom, :js
+#  respond_to :html, :atom, :js
   
 before_filter :only => [:index, :tags] do
   @tags = Fortune.tag_counts  # for tag clouds    

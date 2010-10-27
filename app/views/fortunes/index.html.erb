@@ -1,5 +1,5 @@
 <% title "Wszystkie fortunki" %>
-<%= form_tag fortunes_path, :method => :get, :remote => true do %>  
+<%= form_tag fortunes_path, :method => :get, :remote => false do %>  
   <p>  
     <%= text_field_tag :search, params[:search] %>  
     <%= submit_tag "Search", :name => nil %>  
@@ -12,8 +12,10 @@
 <div class="flickr_pagination">
   <%= will_paginate @posts, :container => false %>
 </div>
-  
-<p><%= link_to "New Fortune", new_fortune_path %></p>
+
+<% if user_signed_in? %>  
+<p><%= link_to "Kopsnij nową fortunkę", new_fortune_path %></p>
+<% end %>
 
 
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
