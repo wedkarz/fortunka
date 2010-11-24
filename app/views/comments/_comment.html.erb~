@@ -2,4 +2,4 @@
 <div class="comment">
   <b>Treść:</b> <%= comment.body %>
 </div>
-<%= link_to "Usuń", [comment.fortune, comment], :confirm => "Na pewno?", :method => :delete %>
+<%= link_to "Usuń", [comment.fortune, comment], :confirm => "Are you sure?", :method => :delete %>

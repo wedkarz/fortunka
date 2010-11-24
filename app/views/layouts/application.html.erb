@@ -38,7 +38,8 @@
     Zalogowany/a jako: <%= current_user.email %>. To nie Ty?
     <%= link_to "Spadam stąd!", destroy_user_session_path %>
   <% else %>
-    <%= link_to_rpx "Wbijam!", user_session_url %>
+    <a class="rpxnow" onclick="return false;"
+href="https://rybakowa-fortunka.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2F192.168.0.48%3A2307"> Wbijam! </a>
   <% end %>
 </div>
       <% flash.each do |name, msg| %>
@@ -48,5 +49,15 @@
       <%= yield %>
     </div>
     <%= javascript_include_rpx(user_session_url) %>
+    
+    <script type="text/javascript">
+  var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static.");
+  document.write(unescape("%3Cscript src='" + rpxJsHost +
+"rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = 'en';
+</script>
   </body>
 </html>

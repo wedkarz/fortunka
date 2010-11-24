@@ -31,12 +31,6 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
   <body>
- 
-    
-    	<h1><%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %></h1>
-    
-    </header> <!-- end header -->
 
     <div id="container">
       <div id="user_nav">
@@ -44,20 +38,15 @@
     Zalogowany/a jako: <%= current_user.email %>. To nie Ty?
     <%= link_to "Spadam stąd!", destroy_user_session_path %>
   <% else %>
-    <%= link_to_rpx "Wbijam!", user_session_url %>
+    <a class="rpxnow" onclick="return false;"
+href="https://rybakowa-fortunka.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2F192.168.0.48%3A2307"> Wbijam! </a>
   <% end %>
 </div>
- <!-- Show a "Please Upgrade" box to both IE7 and IE6 users (Edit to IE 6 if you just want to show it to IE6 users) - jQuery will load the content from js/ie.html into the div -->
-        
-        <!--[if lte IE 7]>
-        	<div class="ie grid_7"></div>
-        <![endif]-->
-        
-            
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
-      
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
     </div>
     <%= javascript_include_rpx(user_session_url) %>
   </body>

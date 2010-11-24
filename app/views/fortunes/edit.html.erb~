@@ -1,7 +1,0 @@
-<%= title "Edycja fortunki" %>
-<%= form_for @fortune do |f| %>
-<p>
-  <%= f.text_area :body %><br>
-  <%= f.submit %>
-<p>
-<% end %>
